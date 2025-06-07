@@ -368,13 +368,14 @@ section {
   width: 2px;
   background: linear-gradient(
     0deg,
-    rgba(69, 222, 196, 0) 0%,
-    #62e0ff 25%,
-    #52aeff 37.51%,
-    #fd5c79 62.83%,
-    #6d45ce 92.91%
+    #ff0000 0%,      /* Vermelho no topo */
+    #ffff00 50%,     /* Amarelo no meio */
+    #ffffff 80%,     /* Branco mais embaixo */
+    rgba(255, 255, 255, 0) 100%  /* Branco transparente no final */
   );
 }
+
+
 
 .gradient-edge:nth-of-type(1) {
   left: 0;

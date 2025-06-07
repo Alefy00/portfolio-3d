@@ -1,14 +1,14 @@
 const navLinks = [
   {
-    name: "Work",
+    name: "Projetos",
     link: "#work",
   },
   {
-    name: "Experience",
+    name: "Experiência",
     link: "#experience",
   },
   {
-    name: "Skills",
+    name: "Habilidades",
     link: "#skills",
   },
   {
@@ -29,10 +29,10 @@ const words = [
 ];
 
 const counterItems = [
-  { value: 15, suffix: "+", label: "Years of Experience" },
-  { value: 200, suffix: "+", label: "Satisfied Clients" },
-  { value: 108, suffix: "+", label: "Completed Projects" },
-  { value: 90, suffix: "%", label: "Client Retention Rate" },
+  { value: 2, suffix: "+", label: "Anos de Experiência" },
+  //{ value: 200, suffix: "+", label: "Satisfied Clients" },
+  { value: 20, suffix: "+", label: "Projetos completos" },
+  //{ value: 90, suffix: "%", label: "Client Retention Rate" },
 ];
 
 const logoIconsList = [
@@ -74,18 +74,18 @@ const logoIconsList = [
 const abilities = [
   {
     imgPath: "/images/seo.png",
-    title: "Quality Focus",
-    desc: "Delivering high-quality results while maintaining attention to every detail.",
+    title: "Foco na Qualidade",
+    desc: "Entregando resultados de alta qualidade, mantendo atenção a cada detalhe",
   },
   {
     imgPath: "/images/chat.png",
-    title: "Reliable Communication",
-    desc: "Keeping you updated at every step to ensure transparency and clarity.",
+    title: "Comunicação confiável",
+    desc: "Mantendo você atualizado em cada etapa para garantir transparência e clareza.",
   },
   {
     imgPath: "/images/time.png",
-    title: "On-Time Delivery",
-    desc: "Making sure projects are completed on schedule, with quality & attention to detail.",
+    title: "Entrega no prazo",
+    desc: "Garantir que os projetos sejam concluídos dentro do prazo, com qualidade e atenção aos detalhes.",
   },
 ];
 
@@ -132,13 +132,13 @@ const techStackIcons = [
     rotation: [0, -Math.PI / 2, 0],
   },
   {
-    name: "Interactive Developer",
-    modelPath: "/models/three.js-transformed.glb",
-    scale: 0.05,
+    name: "Frontend Developer",
+    modelPath: "/models/typescript-logo.glb",
+    scale:1.8,
     rotation: [0, 0, 0],
   },
   {
-    name: "Project Manager",
+    name: "Github Manager",
     modelPath: "/models/git-svg-transformed.glb",
     scale: 0.05,
     rotation: [0, -Math.PI / 4, 0],
@@ -147,9 +147,9 @@ const techStackIcons = [
 
 const expCards = [
   {
-    review: "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
-    imgPath: "/images/exp1.png",
-    logoPath: "/images/logo1.png",
+    review: "Durante o estágio, o Alefy demonstrou criatividade e boa base técnica, contribuindo com ideias que ajudaram a melhorar o desempenho do nosso front-end. Seu envolvimento foi importante para entregarmos uma experiência mais fluida aos usuários.",
+    imgPath: "/images/logos/logo-movely.png",
+    logoPath: "/images/movely-xp.jpg",
     title: "Frontend Developer",
     date: "January 2023 - Present",
     responsibilities: [
