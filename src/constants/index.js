@@ -201,20 +201,25 @@ const socialImgs = [
   {
     name: "insta",
     imgPath: "/images/insta.png",
-  },
-  {
-    name: "fb",
-    imgPath: "/images/fb.png",
+    url: "https://www.instagram.com/alee_sx/",
   },
   {
     name: "x",
     imgPath: "/images/x.png",
+    url: "https://x.com/alefy_xavier?",
   },
   {
     name: "linkedin",
     imgPath: "/images/linkedin.png",
+    url: "https://www.linkedin.com/in/alefy-xavier-developer/",
+  },
+    {
+    name: "whatsapp",
+    imgPath: "/images/whatsapp.svg",
+    url: "https://wa.me/+5538998451799", // substitua pelo seu número com DDI + DDD
   },
 ];
+
 
 export {
   words,
@@ -223,7 +228,6 @@ export {
   counterItems,
   expCards,
   expLogos,
-
   socialImgs,
   techStackIcons,
   techStackImgs,

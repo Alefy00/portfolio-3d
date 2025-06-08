@@ -7,15 +7,22 @@ const Footer = () => {
         {/* Ícones sociais à esquerda no desktop, acima no mobile */}
         <div className="socials flex gap-4 mb-4 md:mb-0">
           {socialImgs.map((socialImg, index) => (
-            <div key={index} className="icon">
+            <a
+              key={index}
+              href={socialImg.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icon"
+            >
               <img
                 src={socialImg.imgPath}
-                alt="social icon"
+                alt={`${socialImg.name} icon`}
                 className="w-6 h-6"
               />
-            </div>
+            </a>
           ))}
         </div>
+
 
         {/* Texto à direita no desktop, abaixo no mobile */}
         <div className="text-center md:text-end mr-2.5">
