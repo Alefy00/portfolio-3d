@@ -150,7 +150,7 @@ const expCards = [
     review: "Durante o estágio, o Alefy demonstrou criatividade e boa base técnica, contribuindo com ideias que ajudaram a melhorar o desempenho do nosso front-end. Seu envolvimento foi importante para entregarmos uma experiência mais fluida aos usuários.",
     imgPath: "/images/logos/logo-movely.png",
     logoPath: "/images/movely-xp.jpg",
-    title: "Desenvolvedor Frontend",
+    title: "Estágio Desenvolvedor Frontend",
     date: "Janeiro 2023 - dezembro 2023",
     responsibilities: [
       "Desenvolver e manteve recursos voltados para o usuário no site",
@@ -160,8 +160,8 @@ const expCards = [
   },
   {
     review: "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
-    imgPath: "/images/exp2.png",
-    logoPath: "/images/logo2.png",
+    imgPath: "/images/celere-img.png",
+    logoPath: "/images/celere-icon.svg",
     title: "Full Stack Developer",
     date: "June 2020 - December 2023",
     responsibilities: [
@@ -172,8 +172,8 @@ const expCards = [
   },
   {
     review: "Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
-    imgPath: "/images/exp3.png",
-    logoPath: "/images/logo3.png",
+    imgPath: "/images/crosoften-svg.svg",
+    logoPath: "/images/crosoften-svg.svg",
     title: "React Native Developer",
     date: "March 2019 - May 2020",
     responsibilities: [
