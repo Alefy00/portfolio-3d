@@ -18,14 +18,14 @@ const navLinks = [
 ];
 
 const words = [
-  { text: "Ideas", imgPath: "/images/ideas.svg" },
-  { text: "Concepts", imgPath: "/images/concepts.svg" },
+  { text: "Ideias", imgPath: "/images/ideas.svg" },
+  { text: "Conceitos", imgPath: "/images/concepts.svg" },
   { text: "Designs", imgPath: "/images/designs.svg" },
-  { text: "Code", imgPath: "/images/code.svg" },
-  { text: "Ideas", imgPath: "/images/ideas.svg" },
-  { text: "Concepts", imgPath: "/images/concepts.svg" },
+  { text: "Código", imgPath: "/images/code.svg" },
+  { text: "Ideias", imgPath: "/images/ideas.svg" },
+  { text: "Conceitos", imgPath: "/images/concepts.svg" },
   { text: "Designs", imgPath: "/images/designs.svg" },
-  { text: "Code", imgPath: "/images/code.svg" },
+  { text: "Código", imgPath: "/images/code.svg" },
 ];
 
 const counterItems = [
@@ -150,12 +150,12 @@ const expCards = [
     review: "Durante o estágio, o Alefy demonstrou criatividade e boa base técnica, contribuindo com ideias que ajudaram a melhorar o desempenho do nosso front-end. Seu envolvimento foi importante para entregarmos uma experiência mais fluida aos usuários.",
     imgPath: "/images/logos/logo-movely.png",
     logoPath: "/images/movely-xp.jpg",
-    title: "Frontend Developer",
-    date: "January 2023 - Present",
+    title: "Desenvolvedor Frontend",
+    date: "Janeiro 2023 - dezembro 2023",
     responsibilities: [
-      "Developed and maintained user-facing features for the Hostinger website.",
-      "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
-      "Optimized web applications for maximum speed and scalability.",
+      "Desenvolver e manteve recursos voltados para o usuário no site",
+      "Colaborar estreitamente com designers de UI/UX para garantir experiências perfeitas para o usuário.",
+      "Otimizar as  paginas web para máxima velocidade e escalabilidade.",
     ],
   },
   {
