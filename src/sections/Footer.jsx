@@ -2,26 +2,32 @@ import { socialImgs } from "../constants";
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="footer-container">
-        <div className="flex flex-col justify-center">
-          <p>Terms & Conditions</p>
-        </div>
-        <div className="socials">
+    <footer className="footer p-4">
+      <div className="flex flex-col md:flex-row justify-between items-center w-full">
+        {/* Ícones sociais à esquerda no desktop, acima no mobile */}
+        <div className="socials flex gap-4 mb-4 md:mb-0">
           {socialImgs.map((socialImg, index) => (
             <div key={index} className="icon">
-              <img src={socialImg.imgPath} alt="social icon" />
+              <img
+                src={socialImg.imgPath}
+                alt="social icon"
+                className="w-6 h-6"
+              />
             </div>
           ))}
         </div>
-        <div className="flex flex-col justify-center">
-          <p className="text-center md:text-end">
-            © {new Date().getFullYear()} Adrian Hajdin. All rights reserved.
+
+        {/* Texto à direita no desktop, abaixo no mobile */}
+        <div className="text-center md:text-end mr-2.5">
+          <p className="text-sm">
+            © {new Date().getFullYear()} Alefy Xavier. Todos os direitos reservados.
           </p>
         </div>
       </div>
     </footer>
   );
 };
+
+
 
 export default Footer;
