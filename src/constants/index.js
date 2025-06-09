@@ -216,7 +216,12 @@ const socialImgs = [
     {
     name: "whatsapp",
     imgPath: "/images/whatsapp.svg",
-    url: "https://wa.me/+5538998451799", // substitua pelo seu número com DDI + DDD
+    url: "https://wa.me/+5538998451799", 
+  },
+      {
+    name: "github",
+    imgPath: "/images/github-icon.svg",
+    url: "https://github.com/Alefy00", 
   },
 ];
 
