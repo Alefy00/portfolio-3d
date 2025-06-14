@@ -3,10 +3,12 @@ import gsap from "gsap";
 
 import AnimatedCounter from "../components/AnimatedCounter";
 import Button from "../components/Button";
-import { words } from "../constants";
-import HeroExperience from "../components/models/hero_models/HeroExperience";
 
+import HeroExperience from "../components/models/hero_models/HeroExperience";
+import { useLanguage } from "../constants/languageContext";
 const Hero = () => {
+  const { content, language } = useLanguage();
+
   useGSAP(() => {
     gsap.fromTo(
       ".hero-text h1",
@@ -27,17 +29,17 @@ const Hero = () => {
           <div className="flex flex-col gap-7">
             <div className="hero-text">
               <h1>
-                Moldando
+                {language === "pt" ? "Moldando" : "Shaping"}
                 <span className="slide">
                   <span className="wrapper">
-                    {words.map((word, index) => (
+                    {content.words.map((word, index) => (
                       <span
                         key={index}
                         className="flex items-center md:gap-3 gap-1 pb-2"
                       >
                         <img
                           src={word.imgPath}
-                          alt="person"
+                          alt="word"
                           className="xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full bg-white-50"
                         />
                         <span>{word.text}</span>
@@ -46,17 +48,26 @@ const Hero = () => {
                   </span>
                 </span>
               </h1>
-              <h1>Em Projetos Reais</h1>
-              <h1>Que entregam resultados</h1>
+              <h1>
+                {language === "pt"
+                  ? "Em Projetos Reais"
+                  : "Real-World Projects"}
+              </h1>
+              <h1>
+                {language === "pt"
+                  ? "Que entregam resultados"
+                  : "That Deliver Results"}
+              </h1>
             </div>
 
             <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-              Olá, sou Alefy, um desenvolvedor brasileiro apaixonado por
-              código.
+              {language === "pt"
+                ? "Olá, sou Alefy, um desenvolvedor brasileiro apaixonado por código."
+                : "Hi, I'm Alefy, a Brazilian developer passionate about code."}
             </p>
 
             <Button
-              text="Meus projetos"
+              text={language === "pt" ? "Meus projetos" : "My Projects"}
               className="md:w-80 md:h-16 w-60 h-12"
               id="counter"
             />
