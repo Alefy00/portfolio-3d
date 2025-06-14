@@ -1,24 +1,16 @@
 import { useState, useEffect } from "react";
-
-import { navLinks } from "../constants";
+import { useLanguage } from "../constants/languageContext";
 
 const NavBar = () => {
-  // track if the user has scrolled down the page
   const [scrolled, setScrolled] = useState(false);
+  const { content, switchLanguage, language } = useLanguage();
 
   useEffect(() => {
-    // create an event listener for when the user scrolls
     const handleScroll = () => {
-      // check if the user has scrolled down at least 10px
-      // if so, set the state to true
-      const isScrolled = window.scrollY > 10;
-      setScrolled(isScrolled);
+      setScrolled(window.scrollY > 10);
     };
 
-    // add the event listener to the window
     window.addEventListener("scroll", handleScroll);
-
-    // cleanup the event listener when the component is unmounted
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -31,7 +23,7 @@ const NavBar = () => {
 
         <nav className="desktop">
           <ul>
-            {navLinks.map(({ link, name }) => (
+            {content.navLinks.map(({ link, name }) => (
               <li key={name} className="group">
                 <a href={link}>
                   <span>{name}</span>
@@ -42,14 +34,32 @@ const NavBar = () => {
           </ul>
         </nav>
 
-        <a href="#contact" className="contact-btn group">
-          <div className="inner">
-            <span>Entre em Contato</span>
+        {/* Botão de contato + idiomas lado a lado */}
+          <div className="flex gap-2 text-xl items-center">
+            <button
+              onClick={() => switchLanguage("pt")}
+              disabled={language === "pt"}
+              className={`w-10 h-10 rounded-full overflow-hidden border ${language === "pt" ? "opacity-50" : "hover:opacity-80"}`}
+            >
+              <img src="/images/flags/br.svg" alt="Português" className="w-full h-full object-cover" />
+            </button>
+
+            <button
+              onClick={() => switchLanguage("en")}
+              disabled={language === "en"}
+              className={`w-10 h-10 rounded-full overflow-hidden border ${language === "en" ? "opacity-50" : "hover:opacity-80"}`}
+            >
+              <img src="/images/flags/us.svg" alt="English" className="w-full h-full object-cover" />
+            </button>
+          <a href="#contact" className="contact-btn group">
+            <div className="inner">
+              <span>{language === "pt" ? "Entre em Contato" : "Contact Me"}</span>
+            </div>
+          </a>
           </div>
-        </a>
-      </div>
+        </div>
     </header>
   );
-}
+};
 
 export default NavBar;
