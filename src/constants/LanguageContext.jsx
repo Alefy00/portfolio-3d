@@ -3,7 +3,6 @@ import ptBR from "./ptBR";
 import enUS from "./enUS";
 
 const LanguageContext = createContext();
-
 const translations = {
   pt: ptBR,
   en: enUS,
