@@ -18,7 +18,7 @@ const enUS = {
 
   counterItems: [
     { value: 2, suffix: "+", label: "Years of Experience" },
-    { value: 300, suffix: "+", label: "Commits on GitHub" },
+    { value: 500, suffix: "+", label: "Commits on GitHub" },
     { value: 20, suffix: "+", label: "Completed Projects" },
     { value: 20, suffix: "+", label: "Technologies Learned" },
   ],
