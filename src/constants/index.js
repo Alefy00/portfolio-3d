@@ -14,55 +14,70 @@ const navLinks = [
 ];
 
 const words = [
-  { text: "Ideias", imgPath: "/images/ideas.svg" },
-  { text: "Conceitos", imgPath: "/images/concepts.svg" },
-  { text: "Designs", imgPath: "/images/designs.svg" },
-  { text: "Código", imgPath: "/images/code.svg" },
-  { text: "Ideias", imgPath: "/images/ideas.svg" },
-  { text: "Conceitos", imgPath: "/images/concepts.svg" },
-  { text: "Designs", imgPath: "/images/designs.svg" },
-  { text: "Código", imgPath: "/images/code.svg" },
+  { text: "Interfaces", imgPath: "/images/designs.svg" },
+  { text: "Produtos", imgPath: "/images/concepts.svg" },
+  { text: "Experiências", imgPath: "/images/ideas.svg" },
+  { text: "Soluções", imgPath: "/images/code.svg" },
+  { text: "Interfaces", imgPath: "/images/designs.svg" },
+  { text: "Produtos", imgPath: "/images/concepts.svg" },
+  { text: "Experiências", imgPath: "/images/ideas.svg" },
+  { text: "Soluções", imgPath: "/images/code.svg" },
 ];
 
+const yearsOfExperience = Math.max(0, new Date().getFullYear() - 2023);
+
 const counterItems = [
-  { value: 2, suffix: "+", label: "Anos de Experiência" },
+  { value: yearsOfExperience, suffix: "+", label: "Anos de experiência profissional" },
   { value: 500, suffix: "+", label: "Commits no GitHub" },
-  { value: 20, suffix: "+", label: "Projetos completos" },
-  { value: 20, suffix: "+", label: "Tecnologias Aprendidas" },
+  { value: 20, suffix: "+", label: "Projetos concluídos" },
+  { value: 20, suffix: "+", label: "Tecnologias utilizadas" },
 ];
 
 const logoIconsList = [
   {
-    imgPath: "/images/logos/crosoften.png",
+    name: "Movely",
+    imgPath: "/images/logos/logo-movely.png",
   },
   {
+    name: "Adviseu",
+  },
+  {
+    name: "Philips",
+  },
+  {
+    name: "Microsoft",
     imgPath: "/images/logos/company-logo-2.png",
   },
   {
-    imgPath: "/images/logos/celere.png",
-  },
-  {
+    name: "Docker",
     imgPath: "/images/logos/company-logo-4.png",
   },
   {
+    name: "Firebase",
     imgPath: "/images/logos/firebase-icon.png",
   },
   {
+    name: "JavaScript",
     imgPath: "/images/logos/javascript-icon.png",
   },
   {
+    name: "Django",
     imgPath: "/images/logos/django-icon.png",
   },
   {
+    name: "PostgreSQL",
     imgPath: "/images/logos/postgresql-icon.png",
   },
   {
+    name: "Vercel",
     imgPath: "/images/logos/company-logo-9.png",
   },
   {
+    name: "Python",
     imgPath: "/images/logos/python.png",
   },
   {
+    name: "React Native",
     imgPath: "/images/logos/react-native-icon.png",
   },
 ];
@@ -70,18 +85,18 @@ const logoIconsList = [
 const abilities = [
   {
     imgPath: "/images/seo.png",
-    title: "Foco na Qualidade",
-    desc: "Entregando resultados de alta qualidade, mantendo atenção a cada detalhe",
+    title: "Qualidade de ponta a ponta",
+    desc: "Cuido da implementação, dos detalhes da interface e da manutenção do código para entregar soluções consistentes.",
   },
   {
     imgPath: "/images/chat.png",
-    title: "Comunicação confiável",
-    desc: "Mantendo você atualizado em cada etapa para garantir transparência e clareza.",
+    title: "Colaboração clara",
+    desc: "Comunico decisões, riscos e progresso com clareza para manter produto e tecnologia alinhados.",
   },
   {
     imgPath: "/images/time.png",
-    title: "Entrega no prazo",
-    desc: "Garantir que os projetos sejam concluídos dentro do prazo, com qualidade e atenção aos detalhes.",
+    title: "Entrega responsável",
+    desc: "Organizo prioridades e executo com previsibilidade, sem abrir mão da qualidade e da atenção aos detalhes.",
   },
 ];
 
@@ -110,31 +125,31 @@ const techStackImgs = [
 
 const techStackIcons = [
   {
-    name: "Desenvolvedor React Native",
+    name: "React e React Native",
     modelPath: "/models/react_logo-transformed.glb",
     scale: 1,
     rotation: [0, 0, 0],
   },
   {
-    name: "Desenvolvedor Python",
+    name: "Python e Django",
     modelPath: "/models/python-transformed.glb",
     scale: 0.8,
     rotation: [0, 0, 0],
   },
   {
-    name: "Desenvolvedor Backend",
+    name: "APIs e Backend",
     modelPath: "/models/node-transformed.glb",
     scale: 5,
     rotation: [0, -Math.PI / 2, 0],
   },
   {
-    name: "Desenvolvedor Frontend",
+    name: "TypeScript e Angular",
     modelPath: "/models/typescript-logo.glb",
     scale:1.8,
     rotation: [0, 0, 0],
   },
   {
-    name: "Github",
+    name: "Git e colaboração",
     modelPath: "/models/git-svg-transformed.glb",
     scale: 0.05,
     rotation: [0, -Math.PI / 4, 0],
@@ -143,39 +158,51 @@ const techStackIcons = [
 
 const expCards = [
   {
-    review: "Durante o estágio, o Alefy demonstrou criatividade e boa base técnica, contribuindo com ideias que ajudaram a melhorar o desempenho do nosso front-end. Seu envolvimento foi importante para entregarmos uma experiência mais fluida aos usuários.",
+    id: "movely-frontend-intern",
+    company: "Movely",
+    companyUrl: null,
+    review: "Durante o estágio, Alefy demonstrou criatividade e uma boa base técnica, contribuindo com melhorias no frontend e colaborando para uma experiência mais fluida para os usuários.",
     imgPath: "/images/logos/logo-movely.png",
     logoPath: "/images/movely-xp.jpg",
-    title: "Estágio Desenvolvedor Frontend",
-    date: "Janeiro 2023 - dezembro 2023",
+    title: "Estagiário em Desenvolvimento Frontend",
+    date: "Janeiro de 2023 – Dezembro de 2023",
+    technologies: ["HTML", "CSS", "JavaScript"],
     responsibilities: [
-      "Desenvolver e manteve recursos voltados para o usuário no site",
-      "Colaborar estreitamente com designers de UI/UX para garantir experiências perfeitas para o usuário.",
-      "Otimizar as  paginas web para máxima velocidade e escalabilidade.",
+      "Desenvolvi e mantive funcionalidades voltadas ao usuário no site.",
+      "Colaborei com designers de UI/UX para construir experiências consistentes e intuitivas.",
+      "Otimizei páginas web com foco em desempenho e escalabilidade.",
     ],
   },
   {
-    review: "Alefy atuou na refatoração e desacoplamento do backend de um ERP legado, tornando-o mais modular e escalável. Além disso, desenvolvi do zero o backend de um sistema PMOC, com foco em desempenho, boas práticas e implantação em ambiente Docker",
-    imgPath: "/images/celere-img.png",
-    logoPath: "/images/celere-icon.svg",
+    id: "adviseu-full-stack-developer",
+    company: "Adviseu",
+    companyUrl: "https://adviseu.com.br/",
+    review: "Atuação full stack na evolução de sistemas e no desenvolvimento de soluções, com foco em qualidade de código, desempenho e manutenibilidade.",
+    imgPath: null,
+    logoPath: null,
     title: "Desenvolvedor Full Stack",
-    date: "Junho 2024 - Atualmente",
+    date: "Junho de 2024 – Atualmente",
+    technologies: ["React Native", "Python", "Django", "APIs REST", "Docker"],
     responsibilities: [
-      "Liderei o desenvolvimento de aplicações Mobile, com foco em escalabilidade.",
-      "Trabalhei com engenheiros de backend para integrar APIs perfeitamente com o frontend.",
-      "Realizei integrações com serviços extrenos como tap to phone e emissão de NF/NFS.",
+      "Atuei no desenvolvimento de aplicações mobile, priorizando escalabilidade e qualidade de código.",
+      "Colaborei com engenheiros de backend para integrar APIs ao frontend de forma consistente.",
+      "Implementei integrações com serviços externos, cuidando da confiabilidade dos fluxos entre sistemas.",
     ],
   },
   {
-    review: "O trabalho do Alefy no desenvolvimento web da Crosoften trouxe um alto nível de qualidade e eficiência. Ele entregou soluções que aprimoraram nossa experiência web e atenderam aos nossos objetivos de produto.",
-    imgPath: "/images/crosoften-svg.svg",
-    logoPath: "/images/crosoften-svg.svg",
-    title: "Desenvolvedor Web",
-    date: "Março 2025 - Atualmente",
+    id: "philips-software-engineer",
+    company: "Philips",
+    companyUrl: null,
+    review: "Na Philips, contribuí para o desenvolvimento e a manutenção de aplicações frontend voltadas à América Latina, colaborando com equipes internacionais em um ambiente ágil.",
+    imgPath: null,
+    logoPath: null,
+    title: "Software Engineer",
+    date: "Janeiro de 2026 – Maio de 2026",
+    technologies: ["Angular", "TypeScript", "TailwindCSS", "RxJS", "APIs REST", "Git", "Agile/Scrum"],
     responsibilities: [
-      "Desenvolvi inumeros layouts usando React e Angular , integrando-os aos serviços de backend da Crosoften .",
-      "Melhorei o desempenho do aplicações web e experiência do usuário por meio de otimização e testes do código.",
-      "Implementei recursos com base no feedback do stakeholders e nas melhores práticas de desenvolvimento.",
+      "Desenvolvi e mantive aplicações frontend escaláveis e responsivas com Angular, TypeScript, TailwindCSS e RxJS.",
+      "Otimizei a performance e refatorei componentes, incluindo gerenciamento de estado e integração com APIs REST.",
+      "Colaborei com equipes internacionais em produtos para a América Latina, utilizando Git e práticas Agile/Scrum.",
     ],
   },
 ];

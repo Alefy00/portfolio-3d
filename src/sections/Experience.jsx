@@ -64,23 +64,46 @@ const Experience = () => {
         <TitleHeader
           title={
             language === "pt"
-              ? "Experiências de Trabalho"
-              : "Work Experiences"
+              ? "Experiência profissional"
+              : "Professional Experience"
           }
           sub={
             language === "pt"
-              ? "💼 Visão geral da minha carreira"
-              : "💼 Overview of my career"
+              ? "💼 Trajetória desde 2023"
+              : "💼 Career journey since 2023"
           }
         />
         <div className="mt-32 relative">
           <div className="relative z-50 xl:space-y-32 space-y-10">
             {content.expCards.map((card) => (
-              <div key={card.title} className="exp-card-wrapper">
+              <div key={card.id} className="exp-card-wrapper">
                 <div className="xl:w-2/6">
                   <GlowCard card={card}>
-                    <div>
-                      <img src={card.imgPath} alt="exp-img" className="w-auto h-20" />
+                    <div className="min-h-20 flex items-center">
+                      {card.imgPath ? (
+                        <img
+                          src={card.imgPath}
+                          alt={
+                            language === "pt"
+                              ? `Logo da ${card.company}`
+                              : `${card.company} logo`
+                          }
+                          className="w-auto max-w-full h-20 object-contain"
+                        />
+                      ) : card.companyUrl ? (
+                        <a
+                          href={card.companyUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-3xl font-semibold tracking-tight text-white hover:text-white-50 transition-colors"
+                        >
+                          {card.company}
+                        </a>
+                      ) : (
+                        <span className="text-3xl font-semibold tracking-tight text-white">
+                          {card.company}
+                        </span>
+                      )}
                     </div>
                   </GlowCard>
                 </div>
@@ -92,17 +115,52 @@ const Experience = () => {
                     </div>
                     <div className="expText flex xl:gap-20 md:gap-10 gap-5 relative z-20">
                       <div className="timeline-logo">
-                        <img
-                          src={card.logoPath}
-                          alt="logo"
-                          className="w-12 h-12 object-contain rounded-2xl"
-                        />
+                        {card.logoPath ? (
+                          <img
+                            src={card.logoPath}
+                            alt={
+                              language === "pt"
+                                ? `Logo da ${card.company}`
+                                : `${card.company} logo`
+                            }
+                            className="w-12 h-12 object-contain rounded-2xl"
+                          />
+                        ) : (
+                          <span
+                            aria-label={card.company}
+                            className="text-lg md:text-2xl font-semibold text-white-50"
+                          >
+                            {card.company.charAt(0)}
+                          </span>
+                        )}
                       </div>
                       <div>
+                        {card.companyUrl ? (
+                          <a
+                            href={card.companyUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block mb-2 text-white-50 hover:text-white underline underline-offset-4"
+                          >
+                            {card.company}
+                          </a>
+                        ) : (
+                          <p className="mb-2 text-white-50">{card.company}</p>
+                        )}
                         <h1 className="font-semibold text-3xl">{card.title}</h1>
                         <p className="my-5 text-white-50">
                           🗓️&nbsp;{card.date}
                         </p>
+                        <div className="mb-6 flex flex-wrap gap-2">
+                          {card.technologies.map((technology) => (
+                            <span
+                              key={technology}
+                              className="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-sm text-white-50"
+                            >
+                              {technology}
+                            </span>
+                          ))}
+                        </div>
                         <p className="text-[#839CB5] italic">
                           {language === "pt"
                             ? "Responsabilidades"

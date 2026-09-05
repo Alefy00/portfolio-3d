@@ -47,13 +47,13 @@ const Contact = () => {
         <TitleHeader
           title={
             language === "pt"
-              ? "Entre em contato – Vamos nos conectar"
-              : "Contact Me – Let's Connect"
+              ? "Vamos conversar sobre produtos e oportunidades"
+              : "Let's talk about products and opportunities"
           }
           sub={
             language === "pt"
-              ? "💬Tem dúvidas ou ideias? Vamos conversar 🚀"
-              : "💬Got questions or ideas? Let's talk 🚀"
+              ? "💬 Entre em contato"
+              : "💬 Get in touch"
           }
         />
 

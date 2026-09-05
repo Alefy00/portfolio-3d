@@ -1,4 +1,4 @@
-import { useRef, useState, useMemo } from "react";
+import { useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -179,18 +179,9 @@ en: [
   // índice do trio atual (0 -> itens 0,1,2 | 3 -> 3,4,5 | etc.)
   const [start, setStart] = useState(0);
 
-  // calcula trio visível sem mudar o DOM
-  const { featured, list } = useMemo(() => {
-    if (content.length === 0) return { featured: null, list: [] };
-
-    const f = content[start] || null;
-    const a = content[start + 1] || null;
-    const b = content[start + 2] || null;
-
-    // sempre manter 2 compactos no wrapper, se existirem
-    const l = [a, b].filter(Boolean);
-    return { featured: f, list: l };
-  }, [content, start]);
+  // Calcula o trio visível sem manter estado derivado.
+  const featured = content[start] || null;
+  const list = [content[start + 1], content[start + 2]].filter(Boolean);
 
   useGSAP(() => {
     if (sectionRef.current) {

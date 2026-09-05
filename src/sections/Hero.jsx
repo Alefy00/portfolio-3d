@@ -29,7 +29,7 @@ const Hero = () => {
           <div className="flex flex-col gap-7">
             <div className="hero-text">
               <h1>
-                {language === "pt" ? "Moldando" : "Shaping"}
+                {language === "pt" ? "Criando" : "Building"}
                 <span className="slide">
                   <span className="wrapper">
                     {content.words.map((word, index) => (
@@ -50,24 +50,24 @@ const Hero = () => {
               </h1>
               <h1>
                 {language === "pt"
-                  ? "Em Projetos Reais"
-                  : "Real-World Projects"}
+                  ? "com Angular, React e TypeScript"
+                  : "with Angular, React & TypeScript"}
               </h1>
               <h1>
                 {language === "pt"
-                  ? "Que entregam resultados"
-                  : "That Deliver Results"}
+                  ? "com performance e escala"
+                  : "for performance at scale"}
               </h1>
             </div>
 
             <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
               {language === "pt"
-                ? "Olá, sou Alefy, um desenvolvedor brasileiro apaixonado por código."
-                : "Hi, I'm Alefy, a Brazilian developer passionate about code."}
+                ? "Sou Alefy, Software Engineer com atuação profissional desde 2023, focado em frontend, integração com APIs REST e experiências responsivas."
+                : "I'm Alefy, a Software Engineer working professionally since 2023, focused on frontend development, REST API integration, and responsive experiences."}
             </p>
 
             <Button
-              text={language === "pt" ? "Meus projetos" : "My Projects"}
+              text={language === "pt" ? "Ver projetos" : "View Projects"}
               className="md:w-80 md:h-16 w-60 h-12"
               id="counter"
             />

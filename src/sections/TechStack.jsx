@@ -32,13 +32,13 @@ const TechStack = () => {
         <TitleHeader
           title={
             language === "pt"
-              ? "Como Posso Contribuir & Minhas Principais Habilidades"
-              : "How I Can Contribute & My Core Skills"
+              ? "Frontend em foco, com base full stack"
+              : "Frontend-focused, with full-stack foundations"
           }
           sub={
             language === "pt"
-              ? "🤝 Meu Diferencial"
-              : "🤝 My Edge"
+              ? "🧩 Tecnologias e práticas"
+              : "🧩 Technologies and practices"
           }
         />
         <div className="tech-grid">

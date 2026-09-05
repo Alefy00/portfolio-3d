@@ -1,5 +1,5 @@
 /** @type {import('next-sitemap').IConfig} */
-module.exports = {
+export default {
   siteUrl: 'https://www.alefyxavier.com.br/', // coloque seu domínio aqui
   generateRobotsTxt: true,           // também gera o robots.txt
 }
